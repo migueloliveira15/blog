@@ -1,0 +1,201 @@
+/* ==========================================================================
+   RESET & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1b4332;   /* Verde escuro elegante */
+    --accent-color: #2d6a4f;    /* Verde tom médio */
+    --gold-accent: #d4af37;     /* Dourado para destaques */
+    --text-color: #2b2b2b;      /* Grafite para leitura confortável */
+    --bg-color: #faf9f6;        /* Off-white suave */
+    --card-bg: #ffffff;         /* Branco puro para blocos */
+    --border-color: #e2e8f0;    /* Cinza claro para linhas */
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Merriweather', serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container de largura máxima */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   CABEÇALHO / HEADER
+   ========================================================================== */
+.header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 60px 0 50px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--gold-accent);
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.author-info {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: #d1e7dd;
+}
+
+/* ==========================================================================
+   CONTEÚDO DO ARTIGO
+   ========================================================================== */
+.post-content {
+    background-color: var(--card-bg);
+    padding: 40px;
+    margin-top: -30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 60px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+.post-content p {
+    margin-bottom: 24px;
+}
+
+.post-content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 40px 0 20px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Lista estilizada */
+.styled-list {
+    list-style: none;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.styled-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+}
+
+.styled-list li::before {
+    content: "⚽";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.9rem;
+}
+
+/* Citação / Quote */
+.quote-box {
+    background-color: #f0f7f4;
+    border-left: 5px solid var(--accent-color);
+    padding: 24px 30px;
+    margin: 35px 0;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Card de interação no final */
+.interaction-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.interaction-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--gold-accent);
+}
+
+.interaction-card p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   RODAPÉ / FOOTER
+   ========================================================================== */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: #718096;
+    border-top: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .header {
+        padding: 40px 0 40px 0;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .post-content {
+        padding: 20px;
+        margin-top: -15px;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.3rem;
+    }
+}
